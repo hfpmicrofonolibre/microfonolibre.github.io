@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>foro</title>
+	<link href="css/microlibre.css" rel="stylesheet"> 
+</head>
+
+<body bgcolor= "#FFEEC3">
+	<header>
+	<section>
+		<div class="titlemen">
+		<img class="logo" src="Logos/Logo-trans.gif" alt="" width="" height="" />
+		<a class="title" href="menu.html">MICRÓFONO LIBRE</a>
+			<nav>
+	<section>
+		<div>
+		<center>
+			<ul class="navtit">
+			<li><a href="contenidos.html">CONTENIDO</a></li>
+			<li><a href="casos.html">CASOS</a></li>
+			<li><a href="foro.html">FORO</a></li>
+			<li><a href="notas.html">NOTAS</a></li>
+			<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf2DbmLWndC3vCZXG9fA8rJXjVJyNJddz1FZNuRmK3rwC6D0Q/viewform">ENCUESTA</a></li>
+			<li><a href="https://www.lasallep.edu.mx">CERRAR SESIÓN</a></li>
+		</ul>
+		</center>
+		</div>
+	</section>
+	</nav>
+		</div>
+	</section>
+	</header>
+<section>
+	<center>
+		<h1 class="banner2">Foros Libres de Doblaje&nbsp;</h1>
+	</center></section>
+
+  <div class="container-for">
+    <!-- Menú lateral -->
+	 
+    <div class="menu-for">
+	<h1 class="titleforb">Menú de Foros</h1>
+      <div class="menu-item-for">
+        <button class="menu-btn-for" data-target="content-1">Pregunta del Día</button>
+      </div>
+      <div class="menu-item-for">
+        <button class="menu-btn-for" data-target="content-3">Comentarios</button>
+      </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="content-for">
+      <div id="content-1" class="content-item-for active-for">
+		  <center>  
+		  <div class="container">
+	<div class="text-column descb">
+		<img src="images/foro1.jpeg" width="300" alt="auto">
+    </div>
+
+    <div class="text-column descb">
+       <img src="images/foro2.jpeg" width="300" alt="auto">
+    </div>	
+	  <div class="text-column descb">
+		<img src="images/foro3.jpeg" width="300" alt="auto">
+	</div>
+	</div>
+		  <h1 class="txtcon">Pregunta del Día</h1>
+		  <p class="txtcon">¿Qué experiencia has experimentado que te ha hecho sentir como víctima de acoso o abuso? </p>
+		
+ 
+  <div id="forum">
+    <form id="commentForm">
+      <center>
+		  <textarea id="commentInput" placeholder="Cuentanos de Forma Anónima..." required></textarea>
+      <button class="btnenv" type="submit">Enviar</button></center>
+    </form>
+    <ul id="commentsList">
+      <!-- Los comentarios aparecerán aquí -->
+    </ul>
+  </div>
+  		  </center>
+      </div>
+      <div id="content-3" class="content-item-for"><center>
+		   <div class="container">
+	<div class="text-column descb">
+		<img src="images/foro1.jpeg" width="300" alt="auto">
+    </div>
+
+    <div class="text-column descb">
+       <img src="images/foro2.jpeg" width="300" alt="auto">
+    </div>	
+	  <div class="text-column descb">
+		<img src="images/foro3.jpeg" width="300" alt="auto">
+	</div>
+	</div>
+<h1 class="txtcon">Comentarios</h1>
+		
+ 
+  <div id="forum2">
+    <form id="commentForm2">
+      <center>
+		  <textarea id="commentInput2" placeholder="Cuentanos de Forma Anónima..." required></textarea>
+      <button class="btnenv" type="submit2">Enviar</button></center>
+    </form>
+    <ul id="commentsList2">
+      <!-- Los comentarios aparecerán aquí -->
+    </ul>
+  </div>
+		  </center>
+      </div>
+    </div>
+  </div>
+  <script>
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.menu-btn-for');
+  const contentItems = document.querySelectorAll('.content-item-for');
+
+  // Mostrar el contenido correspondiente al botón presionado
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const targetId = button.getAttribute('data-target');
+
+      // Ocultar todos los contenidos
+      contentItems.forEach((item) => {
+        item.classList.remove('active-for');
+      });
+
+      // Mostrar el contenido seleccionado
+      document.getElementById(targetId).classList.add('active-for');
+    });
+  });
+});
+	  
+		  
+		  const commentForm = document.getElementById("commentForm");
+const commentInput = document.getElementById("commentInput");
+const commentsList = document.getElementById("commentsList");
+
+// Cargar comentarios desde LocalStorage al iniciar la página
+document.addEventListener("DOMContentLoaded", () => {
+  const savedComments = JSON.parse(localStorage.getItem("comments")) || [];
+  savedComments.forEach(addCommentToDOM);
+});
+
+// Manejar el envío del formulario
+commentForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const commentText = commentInput.value.trim();
+  if (!commentText) return;
+
+  const comment = { text: commentText, likes: 0 }; // Crear objeto comentario
+  saveCommentToLocalStorage(comment);
+  addCommentToDOM(comment);
+
+  commentInput.value = ""; // Limpiar la caja de texto
+});
+
+// Guardar un comentario en LocalStorage
+function saveCommentToLocalStorage(comment) {
+  const comments = JSON.parse(localStorage.getItem("comments")) || [];
+  comments.push(comment);
+  localStorage.setItem("comments", JSON.stringify(comments));
+}
+
+// Agregar un comentario al DOM
+function addCommentToDOM(comment) {
+  const commentItem = document.createElement("li");
+  commentItem.classList.add("comment");
+
+  const commentText = document.createElement("span");
+  commentText.textContent = comment.text;
+
+  const likeButton = document.createElement("button");
+  likeButton.classList.add("like-button");
+  likeButton.textContent = `👍 ${comment.likes}`;
+  likeButton.addEventListener("click", () => {
+    comment.likes++;
+    likeButton.textContent = `👍 ${comment.likes}`;
+    updateLikesInLocalStorage(comment);
+  });
+
+  commentItem.appendChild(commentText);
+  commentItem.appendChild(likeButton);
+  commentsList.appendChild(commentItem);
+}
+
+// Actualizar los likes de un comentario en LocalStorage
+function updateLikesInLocalStorage(updatedComment) {
+  const comments = JSON.parse(localStorage.getItem("comments")) || [];
+  const index = comments.findIndex((c) => c.text === updatedComment.text);
+  if (index !== -1) {
+    comments[index].likes = updatedComment.likes;
+    localStorage.setItem("comments", JSON.stringify(comments));
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Inicializar ambos foros
+  initializeForum("commentForm", "commentInput", "commentsList", "commentsForum1");
+  initializeForum("commentForm2", "commentInput2", "commentsList2", "commentsForum2");
+});
+
+// Función para inicializar un foro
+function initializeForum(formId, inputId, listId, storageKey) {
+  const commentForm = document.getElementById(formId);
+  const commentInput = document.getElementById(inputId);
+  const commentsList = document.getElementById(listId);
+
+  // Cargar comentarios guardados en LocalStorage
+  const savedComments = JSON.parse(localStorage.getItem(storageKey)) || [];
+  savedComments.forEach((comment) => addCommentToDOM(comment, commentsList, storageKey));
+
+  // Manejar el envío del formulario
+  commentForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const commentText = commentInput.value.trim();
+    if (!commentText) return;
+
+    const comment = { text: commentText, likes: 0 };
+    saveCommentToLocalStorage(comment, storageKey);
+    addCommentToDOM(comment, commentsList, storageKey);
+
+    commentInput.value = ""; // Limpiar el campo de texto
+  });
+}
+
+// Guardar un comentario en LocalStorage
+function saveCommentToLocalStorage(comment, storageKey) {
+  const comments = JSON.parse(localStorage.getItem(storageKey)) || [];
+  comments.push(comment);
+  localStorage.setItem(storageKey, JSON.stringify(comments));
+}
+
+// Agregar un comentario al DOM
+function addCommentToDOM(comment, commentsList, storageKey) {
+  const commentItem = document.createElement("li");
+  commentItem.classList.add("comment");
+
+  const commentText = document.createElement("span");
+  commentText.textContent = comment.text;
+
+  const likeButton = document.createElement("button");
+  likeButton.classList.add("like-button");
+  likeButton.textContent = `👍 ${comment.likes}`;
+  likeButton.addEventListener("click", () => {
+    comment.likes++;
+    likeButton.textContent = `👍 ${comment.likes}`;
+    updateLikesInLocalStorage(comment, storageKey);
+  });
+
+  commentItem.appendChild(commentText);
+  commentItem.appendChild(likeButton);
+  commentsList.appendChild(commentItem);
+}
+
+// Actualizar los likes en LocalStorage
+function updateLikesInLocalStorage(updatedComment, storageKey) {
+  const comments = JSON.parse(localStorage.getItem(storageKey)) || [];
+  const index = comments.findIndex((c) => c.text === updatedComment.text);
+  if (index !== -1) {
+    comments[index].likes = updatedComment.likes;
+    localStorage.setItem(storageKey, JSON.stringify(comments));
+  }
+}
+	 
+	  
+</script>
+
+	
+<footer>
+		<section>
+	 	<div class="copyright"> &copy;2024 - pau, hector fabian</div>
+		</section>
+	</footer>	
+</body>
+</html>

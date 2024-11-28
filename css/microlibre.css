@@ -1,0 +1,614 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    width: auto;
+    margin: 0;
+    padding: 0;
+	
+}
+section {
+	width: 100%;
+    margin: 0;
+    padding: 0;
+}
+center {
+    margin: 0;
+    padding: 0;
+}
+header {
+    margin: 0;
+    padding: 0;
+}
+
+.titlemen {
+	display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #000000; 
+	text-decoration: none;	
+}
+
+
+.title{
+	font-family: "Alumni Sans ExtraBold";
+	font-size: 50px;
+	color: #FFFFFF;
+	line-height: 5px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+}
+
+.titlemen a.title:hover {
+    color: #2F28FF;
+    text-decoration: none;
+}
+
+.logo {
+ width: 170px;
+    height: auto;	
+}
+
+.navtit {
+	font-family: "Alumni Sans Light";
+	font-size: 15px;
+	color:  #FFFFFF;
+	display: flex;
+	text-align: center;
+	list-style: none;
+	width: 100%;
+	margin: 8px;
+	
+}
+
+.navmen {
+	font-family: "Alumni Sans Light";
+	font-size: 30px;
+ 	color:  #FFFFFF;
+  	display: flex;
+  	text-align: center;
+	justify-content: center;
+	list-style: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 80%;
+	background-color: #303030;
+	border-radius: 100px;
+	margin: 0 10px;
+}
+
+.navmen2 {
+	border-radius: 100px;
+	padding: 4px 20px;
+	margin: 0 10px;
+	cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.navmen2:hover {
+	background-color: #2F28FF;
+    color: #FFFFFF; 
+}
+
+header ul li a {
+	color:  #FFFFFF;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+header ul li:hover a {
+	color: #2F28FF;
+	font-family: 'Alumni Sans Black';
+	
+}
+
+ul li a {
+	color:  #FFFFFF;
+	cursor: pointer;
+	text-decoration: none;
+	 margin-left: 0px; 
+	margin-right: 50px;
+}
+
+ul li:hover a {
+    color: #FFFFFF; 
+}
+
+.banner {
+    background-image: url("../images/micropone.jpg");
+    height: 300px;
+    width: auto;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0; 
+	margin-bottom: 20px;
+    padding: 0;
+	font-family: "Alumni Sans Medium";
+	font-size: 20px;
+	color: #ffffff;
+	line-height: 25px;
+	text-align: center;
+	padding-left: 180px;
+	padding-right: 180px; 
+	padding-top: 160px;
+}
+
+.banner2 {
+   background-image: url("../images/micropone.jpg");
+   height: 120px;
+   width: 100%;
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin: 0; 
+    padding: 0;
+	padding-top: 35px;
+	font-family: "Alumni Sans Medium";
+	font-size: 60px;
+	color: #ffffff;
+	align-content: center;
+}
+
+.descb {
+	font-family: "Alumni Sans Medium";
+	font-size: 20px;
+	color: #000000;
+	line-height: 25px;
+	margin: 10px;
+	width: auto;	
+	align-content: center;
+	
+}
+
+.desccas {
+	font-family: "Alumni Sans Medium";
+	font-size: 30px;
+	color: #ffffff;
+	line-height: 25px;
+	width: 70%;
+	text-align: center;
+	padding-left: 180px;
+	padding-right: 180px; 
+	padding-top: 40px;
+}
+ .container {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 10px;
+    padding: 20px;
+}
+
+.text-column {
+    flex: 1;
+    padding: 10px;
+    text-align: justify; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; 
+    height: 100%; 
+}
+
+.titlenorm{
+	font-family: "Alumni Sans ExtraBold";
+	font-size: 70px;
+	color: #000000;
+	line-height: 5px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 50px;
+}
+.copyright {
+	font-family: "Alumni Sans thin";
+	font-size: 20px;
+	color: #FFFFFF;
+	line-height: 1px;
+	width: 100%;
+	background-color: #717070;
+	text-align: center;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+
+.navcon {
+	font-family: "Alumni Sans Light";
+	font-size: 30px;
+	color: #FFFFFF;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 10px 50px;
+	width: 50%;
+	background-color: #303030;
+	border-radius: 50px;
+	margin: 0 auto;
+	align-content: center;
+}
+
+        /* Ocultamos los botones de radio */
+input[type="radio"] {
+	display: none;
+}
+
+        /* Estilos de los botones simulados */
+.navcon2 {
+	align-content: center;
+	justify-content: center;
+	border-radius: 50px;
+	padding: 4px 30px;
+	margin: 0px 10px 10px;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+	color: #FFFFFF;
+}
+
+.navcon2:hover {
+	background-color: #2F28FF;
+	color: #FFFFFF;
+}
+
+input[type="radio"]:checked + label {
+background-color: #2F28FF;
+	color: #FFFFFF;
+}
+
+.content {
+    display: none;
+}
+
+#btn1:checked ~ .content1 {
+    display: block;
+}
+
+#btn2:checked ~ .content2 {
+    display: block;
+}
+
+.content1 {
+    text-align: center;
+}
+
+.titlecon {
+	font-family: "Alumni Sans ExtraBold";
+	font-size: 40px;
+	color: #000000;
+	line-height: 5px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+}
+.titleforb {
+	font-family: "Alumni Sans ExtraBold";
+	font-size: 40px;
+	color: #ffffff;
+	line-height: 5px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	padding-bottom: 35px;
+	padding-top: 25px;
+}
+.txtcon {
+	font-family: "Alumni Sans Medium";
+	font-size: 25px;
+	color: #000000;
+	line-height: 30px;
+	width: 95%;
+	text-align: center;
+	justify-content: Center;
+	text-decoration: none;
+}
+
+.txtgen {
+	font-family: "Alumni Sans medium";
+	font-size: 25px;
+	color: #000000;
+	line-height: 30px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 50px;
+}
+
+        /* Estilo general para la página */
+        .pagina {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: "Alumni Sans";
+			color:#000000;
+        }
+
+        .ventanas-contenedor {
+      margin: 0;
+    padding: 0;
+    overflow: hidden; /* Oculta cualquier contenido que se salga de los límites */
+}
+
+        /* Flechas de navegación */
+        .flecha {
+            position: absolute;
+            top: 50%;
+            transform: translateY(400%);
+            color: #ffffff;
+            font-size: 2em;
+            cursor: pointer;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            user-select: none;
+        }
+
+        .flecha.izquierda {
+            left: 10px;
+        }
+
+        .flecha.derecha {
+            right: 10px;
+        }
+
+        /* Ventanas */
+.ventanas {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Importante para que no haya espacio extra */
+    height: 100%; /* Altura consistente con el contenedor */
+        }
+
+.ventana {     
+	 flex: 0 0 100%; /* Cada ventana ocupa exactamente el 100% del ancho */
+    height: 100%; /* Asegura que no haya recortes ni espacios extra */
+    box-sizing: border-box; /* Incluye padding y bordes en el tamaño total */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+	    margin: 0; /* Elimina márgenes dentro de cada ventana */
+    padding: 0;
+	font-size: 25px;
+        }
+
+        /* Imágenes de fondo */
+        .ventana:nth-child(1) {
+            background: url("file:///C|/Users/HAGP0/AppData/Local/Temp/Adobe/images/ventana1.jpeg") center/cover no-repeat;
+        }
+
+        .ventana:nth-child(2) {
+            background:#33C1FF center/cover no-repeat;
+        }
+
+.caslin {
+	font-family: "Alumni Sans Light";
+	font-size: 30px;
+ 	color:  #FFFFFF;
+	list-style: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 20%;
+	background-color: #303030;
+	border-radius: 100px;
+	justify-content: center;
+    align-items: center;
+	cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+	display: inline-block; /* Lo convierte en bloque en línea para personalización */
+    text-align: center;    /* Centra el texto dentro del botón */
+    padding: 10px 20px;    /* Añade espacio interno */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    margin: auto;          /* Margen automático para centrar */
+
+}
+.caslin:hover {
+	background-color: #2F28FF;
+    color: #FFFFFF; 
+}
+
+@keyframes cambio-automatico {
+    0%, 50% {
+        transform: translateX(0);
+    }
+    51%, 100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* styles.css */
+.container-for {
+  display: flex;
+  width: 100%;
+  height: 800px;
+}
+
+.menu-for {
+  width: 22%; /* 1/8 del ancho */
+  background-color: #303030;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item-for {
+  border-bottom: 1px solid #ccc;
+}
+
+.menu-btn-for {
+  width: 100%;
+  padding: 30px;
+  text-align: left;
+  background-color: #303030;
+	font-family:  "Alumni Sans ExtraBold";
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s;
+
+}
+
+.menu-btn-for:hover {
+  background-color: #2F28FF;
+}
+
+.content-for {
+  width: 78%; /* 7/8 del ancho */
+  padding: 20px;
+  overflow-y: auto;
+	font-family: "Alumni Sans Medium";
+	font-size: 35px;
+}
+
+.content-item-for {
+  display: none;
+}
+
+.content-item-for.active-for {
+  display: block;
+}
+
+
+#forum {
+  width: 100%;
+  padding: 30px;
+	margin: auto;
+}
+
+#commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#commentInput {
+  width: 80%;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.btnenv {
+  padding: 10px;
+	width: 20%;
+  background-color: #303030;
+	font-family:  "Alumni Sans ExtraBold";
+  color: #ffffff;
+	font-size: 30px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btnenv:hover {
+  background-color: #2F28FF;
+}
+
+#commentsList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.comment {
+  background: #303030;
+  padding: 10px;
+	color: #ffffff;
+	width: 50%;
+	font-size: 20px;
+	font-family: "Alumni Sans Medium";
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like-button {
+  background: none;
+  border: none;
+  color: #007BFF;
+  cursor: pointer;
+}
+#forum2 {
+  width: 100%;
+  padding: 30px;
+	margin: auto;
+}
+
+#commentForm2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#commentInput2 {
+  width: 80%;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#commentsList2 {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+        /* Slide-in animation */
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Apply the animation */
+        .slide-in {
+            display: inline-block;
+            animation: slideInUp 1s ease-out forwards;
+        }
+
+        /* Delay for elements */
+        .slide-in:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .slide-in:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .slide-in:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+.slide-in:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+        .slide-in:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .slide-in:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+        .slide-in:nth-child(7) {
+            animation-delay: 1.4s;
+        }
+.slide-in:nth-child(8) {
+            animation-delay: 1.6s;
+        }

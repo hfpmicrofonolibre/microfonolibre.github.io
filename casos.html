@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>casos</title>
+	<link href="css/microlibre.css" rel="stylesheet"> 
+</head>
+
+<body bgcolor= "#FFEEC3">
+	<header>
+	<section>
+		<div class="titlemen">
+		<img class="logo" src="Logos/Logo-trans.gif" alt="" width="" height="" />
+		<a class="title" href="menu.html">MICRÓFONO LIBRE</a>
+			<nav>
+	<section>
+		<div>
+		<center>
+			<ul class="navtit">
+			<li><a href="contenidos.html">CONTENIDO</a></li>
+			<li><a href="casos.html">CASOS</a></li>
+			<li><a href="foro.html">FORO</a></li>
+			<li><a href="notas.html">NOTAS</a></li>
+			<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf2DbmLWndC3vCZXG9fA8rJXjVJyNJddz1FZNuRmK3rwC6D0Q/viewform">ENCUESTA</a></li>
+			<li><a href="https://www.lasallep.edu.mx">CERRAR SESIÓN</a></li>
+		</ul>
+		</center>
+		</div>
+	</section>
+	</nav>
+		</div>
+	</section>
+</header>
+<section>
+	<center>
+		<h1 class="banner2">Casos a Observar</h1>
+	</center>
+	
+</section>
+<div class="pagina">
+    <div class="ventanas-contenedor">
+        <!-- Botones de flechas -->
+        <button class="flecha izquierda" onclick="cambiarVentana(-1)">&#9664;</button>
+        <button class="flecha derecha" onclick="cambiarVentana(1)">&#9654;</button>
+
+<div class="ventanas">
+    <!-- Ventana 1 -->
+    <div class="ventana">
+		<ul style="list-style: none">
+       <li><h1>La Industria del Doblaje Está Podrida</h1></li>
+       <li><p>Se denuncian los bajos salarios, sobrecarga de trabajo y falta de reconocimiento para los actores de doblaje.</p></li>
+		<li><a class="caslin" style="text-align: center" href="https://youtu.be/xfVA5akSJPM?si=RItNRPBqSSz5Mxw9">Ver el Video</a></li>
+      <li> <div class="container">
+            <div class="text-column">
+                <img src="images/casos1.jpeg" width= "450px" alt= "auto">
+            </div>
+            <div class="text-column">
+                <img src="images/casos2.jpeg" width= "450px" alt= "auto">
+            </div>
+		</div></li>
+		<li><div class="container">
+            <div class="text-column">
+                <img src="images/casos3.jpeg" width= "450px" alt= "auto">
+            </div>
+            <div class="text-column">
+                <img src="images/casos4.jpeg" width= "450px" alt= "auto">
+            </div>
+       
+		  </div></li>
+			</ul>
+    </div>
+
+    <!-- Ventana 2 -->
+     <div class="ventana">
+		<ul style="list-style: none">
+       <li><h1>Lalo Garza Admite la Mafia y Acomodos del Doblaje</h1></li>
+       <li><p>Lalo Garza dice que la mafia del doblaje es un grupo de personas que controlan los castings y que les dan trabajo a sus amigos y familiares, sin importar su talento.</p></li>
+		<li><a class="caslin" href="https://youtu.be/-hHKLz9nvUg?si=cTSIXLp37RnCq5TX">Ver el Video</a></li>
+      <li> <div class="container">
+            <div class="text-column">
+                <img src="images/casos5.jpeg" width= "450px" alt= "auto">
+            </div>
+            <div class="text-column">
+                <img src="images/casos6.jpeg" width= "450px" alt= "auto">
+            </div>
+		</div></li>
+		<li><div class="container">
+            <div class="text-column">
+                <img src="images/casos7.jpeg" width= "450px" alt= "auto">
+            </div>
+            <div class="text-column">
+                <img src="images/casos8.jpeg" width= "450px" alt= "auto">
+            </div>
+       
+		  </div></li>
+			</ul>
+    </div>
+
+
+    <script>
+        let indexActual = 0;
+        const ventanas = document.querySelector('.ventanas');
+        const totalVentanas = document.querySelectorAll('.ventana').length;
+
+        function cambiarVentana(direccion) {
+            indexActual = (indexActual + direccion + totalVentanas) % totalVentanas;
+            ventanas.style.transform = `translateX(-${indexActual * 100}%)`;
+            ventanas.style.animation = 'none'; // Desactiva el cambio automático al usar las flechas
+        }
+    </script>
+</div>
+	</div>
+		</div>
+<footer>
+		<section>
+	 	<div class="copyright"> &copy;2024 - pau, hector fabian</div>
+		</section>
+</footer>
+</body>
+	</html>
